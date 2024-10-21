@@ -1,3 +1,12 @@
+# nom / prenom
+
+Noelie Talhouarn
+Gabriel Moreau
+Clemence Lauga
+
+
+
+
 # template-vue-pocketbase
 
 This template should help get you started developing with Vue 3 in Vite.
