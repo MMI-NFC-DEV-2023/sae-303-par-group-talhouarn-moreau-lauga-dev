@@ -11,8 +11,6 @@ import PlotFigure from "@/components/PlotFigure.js";
     <div class="flex justify-center mb-6">
       <PlotFigure
         :options="{
-          width: 1100,
-          height: 500,
           marks: [
             Plot.dot(
               filteredTemp.map((temp, index) => ({
@@ -26,7 +24,8 @@ import PlotFigure from "@/components/PlotFigure.js";
                 fill: 'energyConsumption',
                 tip: true,
                 r: 15,
-                fillOpacity: 0.7
+                fillOpacity: 0.7,
+                stroke: 'orange' // Changer la couleur de la bordure des points
               }
             )
           ],
@@ -40,7 +39,7 @@ import PlotFigure from "@/components/PlotFigure.js";
         }"
       />
     </div>
-    <div>
+    <div class="p-7 lg:px-36">
       <h3 class="mb-3">Analyse</h3>
       <h4 class="mb-2">1. Tendance générale</h4>
       <p class="">
