@@ -45,7 +45,7 @@ const timeInterval = ref('Années') // Valeur par défaut
               x: 'Année',
               y1: 'minTemp', // Température minimale
               y2: 'maxTemp', // Température maximale
-              fill: 'lightcoral',
+              fill: '#FF8C00',
               fillOpacity: 0.5
             }),
             Plot.line(filteredData, {
@@ -57,7 +57,7 @@ const timeInterval = ref('Années') // Valeur par défaut
             Plot.line(filteredData, {
               x: 'Année',
               y: 'maxTemp',
-              stroke: 'red',
+              stroke: '#FF8C00',
               strokeWidth: 1
             }),
             Plot.dot(filteredData, {
@@ -69,7 +69,7 @@ const timeInterval = ref('Années') // Valeur par défaut
             Plot.dot(filteredData, {
               x: 'Année',
               y: 'maxTemp',
-              fill: 'red',
+              fill: '#FF8C00',
               tip: true
             })
           ],
