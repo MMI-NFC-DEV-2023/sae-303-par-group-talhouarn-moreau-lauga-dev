@@ -35,6 +35,14 @@ function closeMenu() {
       <ul
         class="flex flex-col gap-14 lg:flex-row text-3xl text-black text-center lg:text-xl lg:mr-8"
       >
+      <li>
+          <RouterLink
+            class="block p-4 rounded-lg lg:hover:underline"
+            to="/"
+            @click="closeMenu"
+            >accueil</RouterLink
+          >
+        </li>
         <li>
           <RouterLink
             class="block p-4 rounded-lg lg:hover:underline"
@@ -74,7 +82,7 @@ function closeMenu() {
       </div>
     </nav>
   </header>
-  <main class="pt-20">
+  <main class="mt-12" >
   </main>
 </template>
 

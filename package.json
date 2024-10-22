@@ -11,10 +11,13 @@
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "typegen": "pocketbase-typegen --db ./pocketbase/pb_data/data.db  --out ./src/pocketbase-types.ts" 
-
+    "typegen": "pocketbase-typegen --db ./pocketbase/pb_data/data.db  --out ./src/pocketbase-types.ts"
   },
   "dependencies": {
+    "@observablehq/plot": "^0.6.16",
+    "@vue-leaflet/vue-leaflet": "^0.10.1",
+    "d3": "^7.9.0",
+    "leaflet": "^1.9.4",
     "pocketbase": "^0.21.5",
     "pocketbase-typegen": "^1.2.1",
     "vue": "^3.4.29",

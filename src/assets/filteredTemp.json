@@ -1,0 +1,13 @@
+[
+  { "Année": 2012, "minTemp": -8.6, "maxTemp": 33.4 },
+  { "Année": 2013, "minTemp": -4.6, "maxTemp": 32.6 },
+  { "Année": 2014, "minTemp": -1.5, "maxTemp": 29.4 },
+  { "Année": 2015, "minTemp": -3.2, "maxTemp": 33 },
+  { "Année": 2016, "minTemp": -1.3, "maxTemp": 31.6 },
+  { "Année": 2017, "minTemp": -2.5, "maxTemp": 32.3 },
+  { "Année": 2018, "minTemp": -4.9, "maxTemp": 32.8 },
+  { "Année": 2019, "minTemp": -2.2, "maxTemp": 31.8 },
+  { "Année": 2020, "minTemp": 0.6, "maxTemp": 32.9 },
+  { "Année": 2021, "minTemp": -2.9, "maxTemp": 30.4 },
+  { "Année": 2022, "minTemp": -2.9, "maxTemp": 36.9 }
+]
