@@ -54,17 +54,17 @@ function closeMenu() {
         <li>
           <RouterLink
             class="block p-4 rounded-lg lg:hover:underline"
-            to="/contact"
+            to="/"
             @click="closeMenu"
-            >Contact</RouterLink
+            >/</RouterLink
           >
         </li>
         <li>
           <RouterLink
             class="block p-4 rounded-lg lg:hover:underline"
-            to="/infos"
+            to="/"
             @click="closeMenu"
-            >Infos</RouterLink
+            >/</RouterLink
           >
         </li>
       </ul>
