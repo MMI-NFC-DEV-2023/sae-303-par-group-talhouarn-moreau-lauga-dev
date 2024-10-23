@@ -40,41 +40,18 @@ function closeMenu() {
             class="block p-4 rounded-lg lg:hover:underline"
             to="/"
             @click="closeMenu"
-            >Accueil</RouterLink
+            >La France</RouterLink
           >
         </li>
         <li>
           <RouterLink
             class="block p-4 rounded-lg lg:hover:underline"
-            to="/infos"
+            to="/LotEtGaronne"
             @click="closeMenu"
-            >Infos</RouterLink
+            >Le lot et Garonne</RouterLink
           >
         </li>
-        <li>
-          <RouterLink
-            class="block p-4 rounded-lg lg:hover:underline"
-            to="/consequences"
-            @click="closeMenu"
-            >Conséquences</RouterLink
-          >
-        </li>
-        <li>
-          <RouterLink
-            class="block p-4 rounded-lg lg:hover:underline"
-            to="/prevision"
-            @click="closeMenu"
-            >Prévisions</RouterLink
-          >
-        </li>
-        <li>
-          <RouterLink
-            class="block p-4 rounded-lg lg:hover:underline"
-            to="/"
-            @click="closeMenu"
-            >/</RouterLink
-          >
-        </li>
+        
       </ul>
       <div class="flex items-center justify-center gap-4 px-4">
         <Button variant="outlined" text="Se connecter" url="/connexion" @click="closeMenu" aria-label="Se connecter" aria-controls="menu-principal" />
