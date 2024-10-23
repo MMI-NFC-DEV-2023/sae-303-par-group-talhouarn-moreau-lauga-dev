@@ -22,11 +22,11 @@ const timeInterval = ref('Années') // Valeur par défaut
   <section class="p-7 lg:px-36">
     <h1 class="mb-6">le Lot-et-Garonne : un aperçu des changements climatiques de 1950 à 2022</h1>
     <p class="mb-4">
-      Nous avons choisi de concentrer notre étude sur le Lot-et-Garonne, un departement qui se distingue
-      par une température moyenne de 20,27°C sur la période analysée. Ce département, situé dans le
-      sud-ouest de la France, présente des conditions climatiques marquées par des étés chauds et
-      des hivers doux. Sa position géographique fait de cette région un excellent exemple des
-      tendances générales observées dans le cadre du réchauffement climatique en France.
+      Nous avons choisi de concentrer notre étude sur le Lot-et-Garonne, un departement qui se
+      distingue par une température moyenne de 20,27°C sur la période analysée. Ce département,
+      situé dans le sud-ouest de la France, présente des conditions climatiques marquées par des
+      étés chauds et des hivers doux. Sa position géographique fait de cette région un excellent
+      exemple des tendances générales observées dans le cadre du réchauffement climatique en France.
     </p>
     <p class="mb-9">
       De plus, en raison de sa situation entre les zones côtières et les terres plus continentales,
@@ -34,7 +34,7 @@ const timeInterval = ref('Années') // Valeur par défaut
       du pays et des spécificités locales, ce qui en fait un indicateur pertinent pour évaluer
       l'impact du réchauffement à une échelle régionale.
     </p>
-    <div class="flex justify-center mb-9">
+    <div class="mb-9 flex justify-center">
       <PlotFigure
         :options="{
           title: 'Évolution des températures dans le Lot-et-Garonne',
@@ -81,10 +81,13 @@ const timeInterval = ref('Années') // Valeur par défaut
         }"
       />
     </div>
-    <a  href="https://explore.data.gouv.fr/fr/datasets/6569af36ba0c3d2f9d4bf98c/#/resources/33dc01bc-1c8b-4e5d-bfcd-185ffe2db682">Données graphique</a>
+    <a
+      href="https://explore.data.gouv.fr/fr/datasets/6569af36ba0c3d2f9d4bf98c/#/resources/33dc01bc-1c8b-4e5d-bfcd-185ffe2db682"
+      >Données graphique</a
+    >
     <h3 class="mb-3 mt-4">Analyse des tendances</h3>
     <h4 class="mb-2">1. Températures maximales</h4>
-    <ul class="list-disc list-inside">
+    <ul class="list-inside list-disc">
       <li class="mb-2">
         Augmentation progressive : On observe une tendance à la hausse des températures maximales.
         Par exemple, des années comme 1991, 2003, et 2022 ont vu des pics élevés (36°C, 38°C, et
@@ -102,39 +105,39 @@ const timeInterval = ref('Années') // Valeur par défaut
       </li>
     </ul>
     <h4 class="mb-2">2. Températures minimales</h4>
-    <ul class="list-disc list-inside">
+    <ul class="list-inside list-disc">
       <li class="mb-2">
         Variabilité notable : Les températures minimales varient de façon assez marquée, avec des
-        hivers très froids notamment en 1956 (-13.2°C) et 1987 (-9°C). Cependant, ces grands
-        froids sont moins fréquents après les années 1980.
+        hivers très froids notamment en 1956 (-13.2°C) et 1987 (-9°C). Cependant, ces grands froids
+        sont moins fréquents après les années 1980.
       </li>
       <li class="mb-4">
-        Adoucissement des hivers : Depuis les années 1990, les hivers semblent légèrement plus
-        doux en moyenne, bien que certaines années comme 2012 (-8.6°C) montrent encore des
-        épisodes de froid important.
+        Adoucissement des hivers : Depuis les années 1990, les hivers semblent légèrement plus doux
+        en moyenne, bien que certaines années comme 2012 (-8.6°C) montrent encore des épisodes de
+        froid important.
       </li>
     </ul>
     <h3 class="mb-3">Évolutions et régularités</h3>
-    <ul class="list-disc list-inside">
+    <ul class="list-inside list-disc">
       <li class="mb-2">
-        Décalage des extrêmes : Il est intéressant de noter que si les hivers froids persistent,
-        la tendance à l'augmentation des températures maximales est plus prononcée, ce qui
-        pourrait signaler une plus grande fréquence des étés chauds, tandis que les hivers restent
+        Décalage des extrêmes : Il est intéressant de noter que si les hivers froids persistent, la
+        tendance à l'augmentation des températures maximales est plus prononcée, ce qui pourrait
+        signaler une plus grande fréquence des étés chauds, tandis que les hivers restent
         globalement froids, mais avec des épisodes extrêmes plus rares.
       </li>
       <li class="mb-2">
         Variabilité interannuelle : Le graphique montre une variabilité assez importante d'une année
-        à l'autre, avec des années plus modérées suivies d'années plus extrêmes. Par exemple,
-        entre 2011 et 2014, les variations sont modérées, tandis que 2015-2017 montre des pics de
-        chaleur plus prononcés.
+        à l'autre, avec des années plus modérées suivies d'années plus extrêmes. Par exemple, entre
+        2011 et 2014, les variations sont modérées, tandis que 2015-2017 montre des pics de chaleur
+        plus prononcés.
       </li>
     </ul>
-    
   </section>
 
-  
   <section class="p-7 lg:px-36">
-    <h1 class="mb-5 lg:mb-7">La hausse des températures et ses conséquences énergétiques dans le Lot et Garonne</h1>
+    <h1 class="mb-5 lg:mb-7">
+      La hausse des températures et ses conséquences énergétiques dans le Lot et Garonne
+    </h1>
     <p class="mb-4">
       Au fil des années, les changements climatiques se traduisent par une augmentation des
       températures moyennes, avec des impacts significatifs sur divers secteurs. Parmi ceux-ci, la
@@ -152,8 +155,13 @@ const timeInterval = ref('Années') // Valeur par défaut
       Voyons maintenant comment ces facteurs interagissent à travers une représentation visuelle des
       données.
     </p>
-    <h2 class="mb-4">Corrélation entre les températures maximales et la consommation d'énergie de 2012 à 2022</h2>
-    <h3 class="mb-7">La consommation d'énergie en KWh pour chaque année, par rapport aux températures maximales dans le Lot-et-Garonne</h3>
+    <h2 class="mb-4">
+      Corrélation entre les températures maximales et la consommation d'énergie de 2012 à 2022
+    </h2>
+    <h3 class="mb-7">
+      La consommation d'énergie en KWh pour chaque année, par rapport aux températures maximales
+      dans le Lot-et-Garonne
+    </h3>
     <div class="mb-6 flex justify-center">
       <PlotFigure
         :options="{
@@ -172,7 +180,7 @@ const timeInterval = ref('Années') // Valeur par défaut
                 fill: 'energyConsumption',
                 tip: true,
                 r: 5,
-                fillOpacity: 0.7,
+                fillOpacity: 0.7
               }
             )
           ],
@@ -185,32 +193,37 @@ const timeInterval = ref('Années') // Valeur par défaut
             grid: {
               display: true
             }
-          
           }
         }"
       />
-      
     </div>
     <div>
-      <p class="mt-3 mb-2">Sources</p>
-      <a href="https://odre.opendatasoft.com/explore/dataset/conso-departement-annuelle/table/?disjunctive.libelle_departement&disjunctive.libelle_region&disjunctive.e_operateurs&disjunctive.g_operateurs&sort=-libelle_departement">Source 1</a>
-      <a href="https://explore.data.gouv.fr/fr/datasets/6569af36ba0c3d2f9d4bf98c/#/resources/33dc01bc-1c8b-4e5d-bfcd-185ffe2db682"> Source 2</a>
+      <p class="mb-2 mt-3">Sources</p>
+      <a
+        href="https://odre.opendatasoft.com/explore/dataset/conso-departement-annuelle/table/?disjunctive.libelle_departement&disjunctive.libelle_region&disjunctive.e_operateurs&disjunctive.g_operateurs&sort=-libelle_departement"
+        >Source 1</a
+      >
+      <a
+        href="https://explore.data.gouv.fr/fr/datasets/6569af36ba0c3d2f9d4bf98c/#/resources/33dc01bc-1c8b-4e5d-bfcd-185ffe2db682"
+      >
+        Source 2</a
+      >
       <h3 class="mb-5 mt-10">Analyse</h3>
       <h4 class="mb-4">1. Tendance générale</h4>
       <p class="mb-4">
         Températures élevées et consommation d'énergie accrue : Les années où les températures
-        maximales sont les plus élevées (comme 2012 et 2022) correspondent à des points plus foncés, indiquant une consommation d'énergie plus élevée. Cela suggère une
-        corrélation positive : à mesure que la température maximale augmente, la consommation
-        d'énergie tend à augmenter. Cela est probablement dû à une plus forte utilisation de
-        systèmes de climatisation ou d'autres moyens de rafraîchissement qui nécessitent davantage
-        d'énergie.
+        maximales sont les plus élevées (comme 2012 et 2022) correspondent à des points plus foncés,
+        indiquant une consommation d'énergie plus élevée. Cela suggère une corrélation positive : à
+        mesure que la température maximale augmente, la consommation d'énergie tend à augmenter.
+        Cela est probablement dû à une plus forte utilisation de systèmes de climatisation ou
+        d'autres moyens de rafraîchissement qui nécessitent davantage d'énergie.
       </p>
       <h4 class="mb-4">2. Années avec des températures plus basses</h4>
       <p class="mb-4">
         En revanche, pour des années comme 2014 et 2020, où les températures maximales sont plus
-        basses (en dessous de 32°C), les points sont plus clairs, ce qui montre une
-        consommation d'énergie plus faible. Cela renforce l'idée que des températures plus modérées
-        entraînent une demande énergétique moins importante.
+        basses (en dessous de 32°C), les points sont plus clairs, ce qui montre une consommation
+        d'énergie plus faible. Cela renforce l'idée que des températures plus modérées entraînent
+        une demande énergétique moins importante.
       </p>
       <h4 class="mb-4">3. Températures modérées et consommation plus variable</h4>
       <p class="mb-4">
@@ -239,12 +252,49 @@ const timeInterval = ref('Années') // Valeur par défaut
         besoins énergétiques futurs et de s'adapter à cette réalité dans un contexte de changement
         climatique.
       </p>
-      
     </div>
     <div>
-      <h1 class="mb-5 mt-10 lg:mb-7">Les journées d'ensoleillement</h1>
+      <h1 class="mb-5 mt-10 lg:mb-7">Les durées d'ensoleillement</h1>
       <Ensoleillement />
     </div>
-  </section>
+    <div>
+      <h3 class="mb-5 mt-10">Analyse</h3>
+      <p class="mb-4">
+        Le schéma présente l'évolution de la durée d'ensoleillement dans le Lot-et-Garonne sur
+        plusieurs décennies (de 1950 à 2022).
+      </p>
+      <p class="mb-4">
+        <strong>1950s à 1980s</strong> : La durée d'ensoleillement semble relativement stable, se
+        situant aux alentours d'un peu plus de 1 million d'heures par décennie.
+      </p>
+      <p class="mb-4">
+        <strong>1990s et 2000s</strong> : On observe une hausse marquée durant ces décennies, avec
+        un pic d'ensoleillement dépassant les 4,5 millions d'heures dans les années 2000. Cela
+        pourrait indiquer une période particulièrement ensoleillée dans le Lot-et-Garonne, reflétant
+        potentiellement des changements climatiques ou une augmentation des périodes de sécheresse.
+      </p>
 
+      <p class="mb-4">
+        <strong>2010s</strong> : Une légère baisse est visible, mais les valeurs restent élevées par
+        rapport aux décennies précédentes (autour de 4 millions d'heures).
+      </p>
+
+      <p class="mb-4">
+        <strong>2020s</strong> : On observe une chute significative de l'ensoleillement, avec des
+        valeurs proches de celles observées dans les années 1950. Cette chute peut être le résultat
+        de prévisions climatiques indiquant des changements dans les modèles d'ensoleillement ou des
+        phénomènes météorologiques extrêmes.
+      </p>
+      <h3 class="mb-3">Conclusion</h3>
+      <p class="mb-8">
+        Cette évolution montre une tendance générale à l'augmentation de l'ensoleillement à partir
+        des années 1990, suivie d'une baisse plus récente. Cette fluctuation pourrait indiquer une
+        transformation des conditions climatiques départementales, avec des implications possibles
+        pour l'agriculture, la gestion de l'eau, et les écosystèmes locaux dans le Lot-et-Garonne.
+        Il est également important de noter que l'évolution de l'ensoleillement est un indicateur
+        clé des changements climatiques, car elle influence directement les températures,
+        l'évaporation, et les périodes de sécheresse.
+      </p>
+    </div>
+  </section>
 </template>
