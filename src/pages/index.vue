@@ -6,12 +6,13 @@ import { RouterLink, RouterView } from 'vue-router/auto'
 import departements from '@/assets/departements.geojson.json'
 import climateData from 'src/assets/climateData3.json'
 import filteredTMax from '@/assets/filteredTMax.json'
+import cleanData from '@/assets/cleanData.json'
 
 import { computed } from 'vue'
 
 const options = computed(() => ({
-  title: 'Les températures maximales des départements en 2024',
-  subtitle: "Les moyennes des températures maximales de chaque départements pour l'année 2024",
+  title: 'Les températures moyennes maximales des départements en 2024',
+  subtitle: "Les moyennes des températures maximales par departements en 2024",
   projection: {
     type: 'mercator',
     domain: departements
@@ -46,14 +47,14 @@ const options = computed(() => ({
 <template>
   <div class="relative">
     <img
-      class="w-full opacity-90"
+      class="opacity-90 filter brightness-50 backdrop-contrast-150"
       src="/public/img/landscape-cracked-earth-from-drought.webp"
       alt="changement climatique"
     />
     <h1
-      class="absolute inset-0 flex items-center justify-center text-center font-bold text-black lg:text-7xl"
+      class="absolute inset-0 flex items-center text-center justify-center font-bold text-orange-50 lg:text-7xl px-5"
     >
-      Le changement climatique
+      Le changement climatique en France et dans le lot et garonne
     </h1>
   </div>
 
@@ -70,7 +71,7 @@ const options = computed(() => ({
       changement climatique.
     </p>
     <h2 class="mt-6 font-bold">
-      Le climat se réchauffe : aperçu des départements les plus affectés
+      Le climat se réchauffe : aperçu des départements les plus affectés en France
     </h2>
 
     <p class="mt-4">
@@ -88,42 +89,117 @@ const options = computed(() => ({
     </p>
   </div>
 
-  <div class="p-7 lg:flex lg:space-x-8 lg:px-36">
-    <div class="flex justify-center lg:w-1/2">
+  <div class="p-7 lg:px-36">
+    
+    <div class="">
       <PlotFigure class="mt-8 lg:mt-0" :options="options" :keys="options" />
+      <p class="mt-3 mb-2">Sources</p>
+      <a href="https://france-geojson.gregoiredavid.fr/"> Source 1</a>
+      <a href="https://explore.data.gouv.fr/fr/datasets/5eb236728ad018f2f0fe1b9e/#/resources/dd0df06a-85f2-4621-8b8b-5a3fe195bcd7"> Source 2</a>
     </div>
 
     <!-- Texte explicatif, aligné à la hauteur de la carte en version desktop -->
-    <div class="flex items-center lg:ml-auto lg:w-1/2 lg:items-start">
-      <div>
-        <p class="mb-4">
-          Ce graphique représente la moyenne des températures maximales enregistrées dans les
-          départements français pour l'année 2024
-        </p>
-        <h4>1. Tendance générale</h4>
-        <ul class="mt-4 list-inside list-disc">
-          <li class="mb-4">
-            La palette de couleurs, allant du jaune pâle à l'orange foncé, indique les variations de la température maximale moyenne entre les départements. Plus la teinte est foncée, plus la température maximale moyenne est élevée.
-          </li>
-          <li class="mb-4">
-            On observe une tendance générale où les départements situés dans le sud de la France, comme ceux de la région Provence-Alpes-Côte d'Azur, montrent des températures maximales plus élevées, atteignant des moyennes supérieures à 20°C.
-          </li>
-        </ul>
-        <h4>2. Différences régionales</h4>
-        <ul class="mt-4 list-inside list-disc">
-          <li class="mb-4">
-            Nord et Nord-Ouest : Les départements du nord de la France, comme la Seine-Saint-Denis, ont des températures maximales moyennes plus basses, autour de 17,58°C, ce qui est cohérent avec la latitude plus élevée et l'influence océanique. Cela se traduit par des couleurs plus claires dans le nord du pays.
-          </li>
-          <li class="mb-4">
-            Centre et Sud : Les départements du centre et du sud de la France, comme ceux du Massif Central et du sud-ouest, sont les plus touchés par des températures maximales plus élevées, dépassant souvent les 18°C et atteignant 20°C dans certaines régions. Ces zones sont représentées par des couleurs plus foncées.
-          </li>
-        </ul>
-        <h4 class="mb-3">3. Disparités de température</h4>
-        <p class="mb-4">Les écarts entre les températures du nord et du sud sont significatifs. Par exemple, en Seine-Saint-Denis, la température maximale moyenne est de 17,58°C, alors que dans des départements du sud, la moyenne dépasse 20°C. Ces écarts peuvent refléter des différences dans l'exposition aux phénomènes climatiques extrêmes, comme les vagues de chaleur.</p>
-        <h4 class="mb-3">4. Impact climatique potentiel</h4>
-        <p>Ces variations de température maximale pourraient avoir un impact direct sur les infrastructures, la gestion des ressources en eau et l'agriculture, surtout dans les régions du sud, où les températures sont plus élevées. Les départements affichant des températures maximales élevées, notamment dans le sud, pourraient connaître des périodes de chaleur prolongées, aggravant les risques de sécheresse.</p>
-        En résumé, ce graphique illustre la répartition géographique des températures maximales en France pour 2024, soulignant un contraste notable entre les départements du nord, qui restent relativement frais, et ceux du sud, qui subissent des températures maximales plus élevées.
-      </div>
+    <div class="mt-8">
+      <p class="mb-4">
+        Ce graphique représente la moyenne des températures maximales enregistrées dans les
+        départements français pour l'année 2024
+      </p>
+      <ul class="mt-4 list-inside list-disc">
+        <li class="mb-4">
+          Sud de la France : Les départements du sud, comme les Alpes-Maritimes (22,41°C), la Corse-du-Sud (22,94°C), et le Vaucluse (23,08°C), affichent les températures les plus élevées. Cela est conforme aux tendances climatiques où les régions méditerranéennes sont naturellement plus chaudes.
+        </li>
+        <li class="mb-4">
+          Nord et Nord-Ouest : Les départements du nord et du nord-ouest, tels que la Manche (14,67°C) et le Pas-de-Calais (15,6°C), présentent des températures moyennes plus basses, ce qui peut s'expliquer par l'influence océanique et la latitude plus élevée.
+        </li>
+        <li class="mb-4">
+         Centre et Ouest : Des départements comme le Maine-et-Loire (18,49°C) et la Vienne (18,89°C) ont des températures légèrement plus modérées, reflétant un climat tempéré mais avec une influence continentale plus marquée.
+        </li>
+        <li class="mb-4">
+         Inégalités régionales face à la chaleur : Les écarts de température entre le sud (Vaucluse à 23,08°C) et le nord (Manche à 14,67°C) pourraient accentuer les disparités dans la gestion des ressources hydriques et l'adaptation des infrastructures face aux épisodes de chaleur extrême.
+        </li>
+        <li class="mb-4">
+        Effets possibles sur l'agriculture et l'économie : Des départements fortement agricoles, comme la Drôme (21,29°C) et le Lot-et-Garonne (20,92°C), pourraient être particulièrement vulnérables à l'augmentation des températures, ce qui affecterait les cultures sensibles à la chaleur (comme le blé, le vin, ou les fruits).        </li>
+      </ul>
+      
+      <p class="mb-3">En résumé, ce graphique illustre la répartition géographique des températures maximales en France pour 2024, soulignant un contraste notable entre les départements du nord, qui restent relativement frais, et ceux du sud, qui subissent des températures maximales plus élevées.</p>
+      
     </div>
+
+    <section>
+    <div>
+      
+  <h1 class="mb-4 mt-8">Les prévisions</h1>
+  <p>
+    Les changements climatiques que nous observons aujourd'hui ne sont que le début d'une
+    transformation plus profonde et plus durable de notre environnement. Grâce aux données réelles
+    et prévisionnelles, il est possible d'anticiper l'évolution des conditions météorologiques,
+    notamment la hausse des températures.
+  </p>
+ 
   </div>
+  <div>
+    <h2 class="mt-4">Évolution de la température moyenne en France (2005-2050)</h2>
+    <h3 class="mb-3">Les températures en degré Celsius prévues jusqu'à 2050</h3>
+   <PlotFigure
+   :options="{
+    
+    marks: [
+    Plot.line(cleanData, {
+      x: 'Year',
+      y: 'Temperature',
+      stroke: d => d.Type,
+      strokeWidth: 2
+    }),
+    Plot.dot(cleanData, {
+      x: 'Year',
+      y: 'Temperature',
+      fill: d => d.Type,
+      r: 4,
+      tip: d => `Année: ${d.Year}\nTempérature: ${d.Temperature.toFixed(2)}°C`
+    })
+  ],
+   x: { label: 'Année' },
+   y: { label: 'Température (°C)', grid: true },
+          color: {
+            domain: ['Données réelles', 'Données prévisionnelles'],
+            legend: true,
+            range: ['red', 'gold'],  
+          }
+   }"
+   />
+   <p class="mt-3 mb-2">Sources</p>
+      <a href="https://donneespubliques.meteofrance.fr/"> Données prévisionnelles</a>
+  <h3 class="mb-3 mt-4">Interprétation des données</h3>
+    <ul class="list-disc list-inside">
+      <li class="mb-2">
+       Données réelles (en rouge) : De 2005 jusqu'à environ 2025, les points rouges montrent l'évolution des températures mesurées. On observe une tendance générale à la hausse, malgré quelques fluctuations à la baisse dans certaines années. La température moyenne est passée d'environ 12,3°C en 2005 à environ 13,6°C en 2025. C'est une augmentation significative en 20 ans.
+      </li>
+      <li class="mb-2">
+       Données prévisionnelles (en jaune) : Après 2025, les points jaunes représentent les prévisions de température moyenne jusqu'en 2050. La courbe montre une montée continue des températures avec une augmentation progressive qui projette des températures autour de 14,8°C à 15°C d'ici 2050. Les prévisions soulignent une tendance haussière sans signe de stabilisation.
+      </li>
+    </ul>
+  <h3 class="mb-3">Analyse des tendances</h3>
+    <ul class="list-disc list-inside">
+      <li class="mb-2">
+        Hausse constante des températures : La température moyenne est en constante augmentation, ce qui reflète les impacts du changement climatique en France. La hausse de température pourrait être due à plusieurs facteurs, tels que l'augmentation des gaz à effet de serre et les activités humaines.
+      </li>
+      <li class="mb-4">
+        Différences entre les données réelles et prévisionnelles : Si les données réelles montrent des fluctuations d'année en année, les prévisions semblent indiquer une croissance plus stable et régulière. Cela peut refléter une modélisation basée sur des scénarios climatiques futurs.
+      </li>
+    </ul>
+    <h3 class="mb-3">Implications</h3>
+    <ul class="list-disc list-inside">
+      <li class="mb-2">
+        Changement climatique : Cette augmentation des températures est alarmante car elle peut accentuer les phénomènes météorologiques extrêmes, comme les vagues de chaleur, et avoir des effets importants sur l'agriculture, la biodiversité et les ressources en eau.
+      </li>
+      <li class="mb-8">
+        Réponse politique et sociale : La courbe montre clairement que des actions sont nécessaires pour limiter cette augmentation et ses effets néfastes. Les décideurs peuvent utiliser ce genre de données pour planifier des politiques de réduction des émissions de CO2 et d’adaptation climatique.
+      </li>
+    </ul>
+    
+  </div>
+
+  </section>
+
+</div>
 </template>
