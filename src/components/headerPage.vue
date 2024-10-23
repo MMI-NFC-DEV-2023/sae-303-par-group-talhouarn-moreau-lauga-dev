@@ -28,7 +28,7 @@ function closeMenu() {
       <span :class="{ '-translate-y-[10px] -rotate-45 ': activeMenu }"></span>
     </button>
     <nav
-      class="transform transition-transform duration-500 ease-in-out invisible opacity-0 flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-white lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100 lg:justify-end"
+      class="transform transition-transform duration-500 ease-in-out invisible opacity-0 flex-1 px-6 py-12 flex justify-between mt-20 flex-col fixed z-10 inset-0 bg-gray-950 lg:mt-0 lg:flex-row lg:static lg:bg-transparent lg:py-6 lg:visible lg:opacity-100 lg:justify-end"
       :class="{ '!visible !opacity-100 bg-gray-950': activeMenu }"
       v-scroll-lock="activeMenu"
     >
@@ -40,7 +40,7 @@ function closeMenu() {
             class="block p-4 rounded-lg lg:hover:underline"
             to="/"
             @click="closeMenu"
-            >accueil</RouterLink
+            >Accueil</RouterLink
           >
         </li>
         <li>
@@ -48,7 +48,7 @@ function closeMenu() {
             class="block p-4 rounded-lg lg:hover:underline"
             to="/infos"
             @click="closeMenu"
-            >infos</RouterLink
+            >Infos</RouterLink
           >
         </li>
         <li>
@@ -56,7 +56,7 @@ function closeMenu() {
             class="block p-4 rounded-lg lg:hover:underline"
             to="/consequences"
             @click="closeMenu"
-            >conséquences</RouterLink
+            >Conséquences</RouterLink
           >
         </li>
         <li>
@@ -82,7 +82,7 @@ function closeMenu() {
       </div>
     </nav>
   </header>
-  <main class="mt-12" >
+  <main class="mt-20" >
   </main>
 </template>
 
