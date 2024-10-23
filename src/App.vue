@@ -6,15 +6,15 @@ import FooterPage from './components/footerPage.vue';
 </script>
 
 <template>
+<HeaderPage />
  <div class="bg-orange-50">
   <main>
-    <HeaderPage />
     <RouterView v-slot="{ Component }">
     <Suspense>
       <component :is="Component" :key="$route.path" />
     </Suspense>
   </RouterView>
-  <FooterPage />
-  </main>
-  </div>
+</main>
+</div>
+<FooterPage />
 </template>
