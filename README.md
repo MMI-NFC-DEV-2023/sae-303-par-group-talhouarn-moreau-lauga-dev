@@ -4,8 +4,11 @@ Noelie Talhouarn
 Gabriel Moreau
 Clemence Lauga
 
+# lien du site 
+https://sae303.noelie-talhouarn.fr/
 
-
+# lien du observable 
+https://observablehq.com/d/68eb4df3bd43e8b8
 
 
 
