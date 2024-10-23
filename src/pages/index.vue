@@ -47,7 +47,7 @@ const options = computed(() => ({
   <div class="relative">
     <img
       class="w-full opacity-90"
-      src="/public/img/landscape-cracked-earth-from-drought.jpg"
+      src="/public/img/landscape-cracked-earth-from-drought.webp"
       alt="changement climatique"
     />
     <h1
