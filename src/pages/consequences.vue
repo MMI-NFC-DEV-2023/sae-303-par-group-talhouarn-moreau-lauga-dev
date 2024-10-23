@@ -87,14 +87,6 @@ import PlotFigure from '@/components/PlotFigure.js'
         consommation, ou les conditions météorologiques spécifiques (canicules, périodes de froid,
         etc.), peuvent également jouer un rôle.
       </p>
-      <h4 class="mb-4">4. Linéarité de la corrélation</h4>
-      <p class="mb-5">
-        Bien qu'il y ait une corrélation positive globale entre les températures maximales et la
-        consommation d'énergie, celle-ci n'est pas parfaitement linéaire. Par exemple, la
-        consommation d'énergie en 2020 est relativement faible malgré des températures proches de
-        celles de 2019. Cela montre que la température maximale n'est pas l’unique facteur
-        déterminant la consommation d'énergie, bien qu'elle joue un rôle important.
-      </p>
       <h3 class="mb-4">Interprétation globale</h3>
       <p class="mb-4">
         Il est clair que lorsque les températures augmentent, surtout au-delà de 33-34°C, la
