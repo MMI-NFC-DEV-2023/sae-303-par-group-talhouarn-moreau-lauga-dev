@@ -62,9 +62,9 @@ function closeMenu() {
         <li>
           <RouterLink
             class="block p-4 rounded-lg lg:hover:underline"
-            to="/"
+            to="/prevision"
             @click="closeMenu"
-            >/</RouterLink
+            >Prévisions</RouterLink
           >
         </li>
         <li>
